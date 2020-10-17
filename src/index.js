@@ -9,7 +9,7 @@ app.use(express.static('public'));
 app.get('*', (req, res) => {
     const store = createStore();
 
-    res.send(renderer(req), store);
+    res.send(renderer(req, store));
 });
 
 app.listen(3000, () => {
